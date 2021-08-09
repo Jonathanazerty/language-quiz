@@ -30,8 +30,6 @@ function whatIsHappening() {
 
 whatIsHappening();
 
-$totalPoints = 0;
-
 // Start the game
 $game = new LanguageGame();
 $game->run();

@@ -13,14 +13,15 @@
 <body>
 	<!-- TODO: add a form for the user to play the game -->
 	<div class="container">
-		<h1>Give the right translation for the Spanish word</h1>
+		<h1><u>Give the right translation for the following Spanish word</u></h1>
 		<!-- display message that the purchase is successful-->
-		<?php if (!empty($result['message'])) { ?>
+		<!-- <?php /*if (!empty($result['message'])) { ?>
 			<div class="alert <?php 
 				if ($result['errors']) { echo 'alert-danger'; } 
 				else { echo 'alert-success'; } ?>">
-				<?= $result['message'] ?>
-			</div>
+				<?= $result['message'] */?>
+			</div> -->
+			<br>
 		<form method="post">
 			<?php /*
 			<div class="form-row">
@@ -34,20 +35,19 @@
 			<fieldset>
 				<div class="form-row">
 					<div class="form-group col-md-3">
-						<label for="word">(word)</label>
-						<input type="text" name="word" id="word" class="form-control" />
+						<label for="spanishword"><h1><?= $game->randomWord->spanishWord ?></h1></label>
+						<input type="text" name="translation" id="translation" class="form-control" />
 					</div>
-					
 				</div>
 
 			</fieldset>
 
-			<button type="submit" class="btn btn-primary">Order!</button>
+			<button type="submit" class="btn btn-primary">Submit</button>
 			<button type="reset" class="btn btn-primary">Start over</button>
 
 		</form>
 
-		<footer>SCORE: You've got <strong>&euro; <?php echo $totalPoints ?></strong> points.</footer>
+		<footer>SCORE: You've got <strong> <?php /*echo $totalPoints */?></strong> points.</footer>
 
 	</div>
 </body>

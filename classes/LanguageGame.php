@@ -2,7 +2,8 @@
 
 class LanguageGame
 {
-    private array $words;
+    private array $words = [];
+    public Word $randomWord;
 
     public function __construct()
     {
@@ -11,6 +12,10 @@ class LanguageGame
         // and are used mostly for more *static* types of data (a fixed set of translations in this case)
         foreach (Data::words() as $spanishTranslation => $englishTranslation) {
             // TODO: create instances of the Word class to be added to the words array
+            $word = new Word ($spanishTranslation, $englishTranslation);
+            //var_dump($word);
+
+            array_push($this->words, $word);
         }
     }
 
@@ -21,9 +26,13 @@ class LanguageGame
         // Option A: user visits site first time (or wants a new word)
         // TODO: select a random word for the user to translate
 
+        $this->randomWord = $this->words[array_rand($this->words, 1)];
+
         // Option B: user has just submitted an answer
         // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
         // TODO: generate a message for the user that can be shown
 
+        // $word -> verify($_SESSION['answer'], $_SESSION['word']);
     }
+
 }
