@@ -5,14 +5,14 @@ class Data
     public static function words()
     {
         return [
-            'pain' => 'bread',
-            'nain de jardin' => 'garden gnome',
-            'ouef' => 'egg',
-            'bouisson' => 'bush',
-            'chapeau' => 'hat',
-            'porte' => 'door',
-            'musique' => 'music',
-            'biscuit' => 'cookie',
+            'pan' => 'bread',
+            'gnomo de jardin' => 'garden gnome',
+            'huevo' => 'egg',
+            'arbusto' => 'bush',
+            'sombrero' => 'hat',
+            'puerta' => 'door',
+            'música' => 'music',
+            'galleta' => 'cookie',
         ];
     }
 }
