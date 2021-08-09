@@ -28,11 +28,12 @@ class LanguageGame
 
         $this->randomWord = $this->words[array_rand($this->words, 1)];
 
+        var_dump($this->randomWord->answer);
         // Option B: user has just submitted an answer
         // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
         // TODO: generate a message for the user that can be shown
 
-        // $word -> verify($_SESSION['answer'], $_SESSION['word']);
+        $word->verify($_SESSION['answer'], $_SESSION['word']);
     }
 
 }

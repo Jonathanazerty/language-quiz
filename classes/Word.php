@@ -11,6 +11,7 @@ class Word
         {
             $this->spanishWord = $spanishWord;
             $this->answer = $answer;
+            // var_dump($this->answer);
         }
 
     public function verify(string $answer)
@@ -19,17 +20,24 @@ class Word
         // TODO: use this function to verify if the provided answer by the user matches the correct one
         // Bonus: allow answers with different casing (example: both bread or Bread can be correct answers, even though technically it's a different string)
         // Bonus (hard): can you allow answers with small typo's (max one character different)?
-
-        if ($this->randomWord == $answer){
-            echo '¡Felicidades, your answer : ' . $_POST['translation'] .' is correcto ! 🇪🇸 '. '<br>';
+        if ($this->answer == $answer) {
+            return true;
+        }
+        else{
+            return false;
         }
 
-        if (empty($answer)){
-            echo 'Fill in your answer, por favor'. '<br>';
-        }
-        else {
-            echo 'Por desgracia, your answer : ' . $_POST['translation'] .' is incorrecto ! ❌ '. '<br>';
-        }
+        
+        // if ($this->randomWord == $answer){
+        //     echo '¡Felicidades, your answer : ' . $_POST['translation'] .' is correcto ! 🇪🇸 '. '<br>';
+        // }
+
+        // if (empty($answer)){
+        //     echo 'Fill in your answer, por favor'. '<br>';
+        // }
+        // else {
+        //     echo 'Por desgracia, your answer : ' . $_POST['translation'] .' is incorrecto ! ❌ '. '<br>';
+        // }
 
         // $errors = [];
 
