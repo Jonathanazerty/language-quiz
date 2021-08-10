@@ -38,4 +38,10 @@ whatIsHappening();
 $game = new LanguageGame();
 $game->run();
 
+var_dump('<pre>');
+var_dump($game);
+var_dump('</pre>');
+
+//session_destroy();
+
 require 'view.php';

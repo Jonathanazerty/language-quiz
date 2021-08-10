@@ -23,14 +23,8 @@ class LanguageGame
     public function run()
     {
         // TODO: check for option A or B
-        // $submitChoice = isset($_POST["submit"]) && !empty($_POST["translation"]);
-        // if (!$submitChoice){
-        //     $this->giveRandomWord();
-        // } else {
-        //     $this->choiceSubmitted();
-        // }
-
-        if (!isset($_POST["submit"])){
+        $submitChoice = isset($_POST["submit"]) && !empty($_POST["userInput"]);
+        if (!$submitChoice){
             $this->giveRandomWord();
         } else {
             $this->choiceSubmitted();
@@ -44,19 +38,19 @@ class LanguageGame
 
         $this->randomWord = $this->words[array_rand($this->words, 1)];
         // remember that it's a class -> session
-        $_SESSION['translation'] = serialize($this->randomWord);
+        $_SESSION['answer'] = serialize($this->randomWord);
         var_dump($this->randomWord->answer);
     }
 
     private function choiceSubmitted()
     {
         // Option B: user has just submitted an answer
-        $this->randomWord = unserialize($_SESSION['translation']);
+        $this->randomWord = unserialize($_SESSION['answer']);
         // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
-        // $userChoice = $_POST["translation"];
+        $userChoice = $_POST["userInput"];
 
         // TODO: generate a message for the user that can be shown
-        if ($this->randomWord->verify($_POST['translation']) === true){
+        if ($this->randomWord->verify($userChoice) === true){
             $this->message = '¡Felicidades, your answer is correcto ! 🇪🇸';
         } else {
             $this->message = 'Por desgracia, your answer is incorrecto ! ❌';

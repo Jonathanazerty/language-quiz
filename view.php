@@ -36,7 +36,7 @@
 				<div class="form-row">
 					<div class="form-group col-md-3">
 						<label for="spanishword"><h1><?= $game->randomWord->spanishWord ?></h1></label>
-						<input type="text" name="translation" id="translation" class="form-control" />
+						<input type="text" name="userInput" id="userInput" class="form-control" ><h3><?= $game->message ?></h3>
 					</div>
 				</div>
 
@@ -47,7 +47,7 @@
 
 		</form>
 
-		<h3><?= $game->message ?></h3>
+		<h3 class="answerCheck"> <?= $game->message ?></h3>
 
 		<footer>SCORE: You've got <strong> <?php /*echo $totalPoints */?></strong> points.</footer>
 
