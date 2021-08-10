@@ -39,7 +39,6 @@ class LanguageGame
         $this->randomWord = $this->words[array_rand($this->words, 1)];
         // remember that it's a class -> session
         $_SESSION['answer'] = serialize($this->randomWord);
-        var_dump($this->randomWord->answer);
     }
 
     private function choiceSubmitted()
@@ -51,12 +50,10 @@ class LanguageGame
 
         // TODO: generate a message for the user that can be shown
         if ($this->randomWord->verify($userChoice) === true){
-            $this->message = '¡Felicidades, your answer is correcto ! 🇪🇸';
+            $this->message = '¡Felicidades, your answer is correcto ! 💃';
         } else {
             $this->message = 'Por desgracia, your answer is incorrecto ! ❌';
         }
-        var_dump($userChoice);
-        var_dump($this->message);
     }
 
 

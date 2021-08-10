@@ -36,21 +36,21 @@
 				<div class="form-row">
 					<div class="form-group col-md-3">
 						<label for="spanishword"><h1><?= $game->randomWord->spanishWord ?></h1></label>
-						<input type="text" name="userInput" id="userInput" class="form-control" ><h3><?= $game->message ?></h3>
+						<input type="text" name="userInput" id="userInput" class="form-control" >
 					</div>
 				</div>
 
 			</fieldset>
-
-			<button type="submit" class="btn btn-primary">Submit</button>
-			<button type="reset" class="btn btn-primary">Start over</button>
-
+			<br>
+			<button type="submit" name="submit" class="btn btn-primary">Submit</button>
+			<button type="reset" name="reset" class="btn btn-primary">Start over</button>
+			<br>
 		</form>
 
-		<h3 class="answerCheck"> <?= $game->message ?></h3>
-
+		<h3 class="message"> <?= $game->message ?></h3>
+		<br>
 		<footer>SCORE: You've got <strong> <?php /*echo $totalPoints */?></strong> points.</footer>
-
+		<br><br>
 	</div>
 </body>
 </html>
