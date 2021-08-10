@@ -14,18 +14,20 @@ require_once 'classes/LanguageGame.php';
 // require_once 'classes/Player.php'; // Only needed for extra's
 require_once 'classes/Word.php';
 
+session_start();
+
 // Use this function when you need to need an overview of these variables
 function whatIsHappening() {
-    echo '<pre>';
     echo '<h2>$_GET</h2>';
     var_dump($_GET);
     echo '<h2>$_POST</h2>';
+    echo('<pre>');
     var_dump($_POST);
+    echo('</pre>');
     echo '<h2>$_COOKIE</h2>';
     var_dump($_COOKIE);
     echo '<h2>$_SESSION</h2>';
     var_dump($_SESSION);
-    echo '</pre>';
 }
 
 whatIsHappening();
