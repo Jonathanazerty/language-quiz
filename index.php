@@ -27,7 +27,9 @@ function whatIsHappening() {
     echo '<h2>$_COOKIE</h2>';
     var_dump($_COOKIE);
     echo '<h2>$_SESSION</h2>';
+    echo('<pre>');
     var_dump($_SESSION);
+    echo('</pre>');
 }
 
 whatIsHappening();

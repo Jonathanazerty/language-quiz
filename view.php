@@ -38,9 +38,6 @@
 						<label for="spanishword"><h1><?= $game->randomWord->spanishWord ?></h1></label>
 						<input type="text" name="translation" id="translation" class="form-control" />
 					</div>
-					<div class="form-group col-md-3">
-						<label for="message"><h3><?= $game->message ?></h3></label>
-					</div>
 				</div>
 
 			</fieldset>
@@ -49,6 +46,8 @@
 			<button type="reset" class="btn btn-primary">Start over</button>
 
 		</form>
+
+		<h3><?= $game->message ?></h3>
 
 		<footer>SCORE: You've got <strong> <?php /*echo $totalPoints */?></strong> points.</footer>
 
